@@ -1,0 +1,85 @@
+/* Animation in CSS consists of 2 elements
+1. animation styles/properties
+2. defining keyframes
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background-color: rgb(49, 49, 49);
+  color: white;
+}
+
+.hero {
+  text-align: center;
+  font-size: 50px;
+  width: full;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  animation-name: fadeinandup;
+  animation-duration: 8s;
+}
+
+/* keyframes are represented in terms of percentage (%) 
+from = 0%
+to = 100%
+*/
+
+@keyframes fadeinandup {
+  from {
+    opacity: 0%;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+
+.subsection {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mywork {
+  animation-name: slideinfromleft;
+  animation-duration: 3s;
+}
+
+@keyframes slideinfromleft {
+  from {
+    transform: translateX(-500px);
+    opacity: 0%;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 100%;
+  }
+}
+
+.socialmedia {
+  animation-name: slideinfromright;
+  animation-duration: 3s;
+}
+
+@keyframes slideinfromright {
+  from {
+    transform: translateX(1000px);
+    opacity: 0%;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 100%;
+  }
+}
